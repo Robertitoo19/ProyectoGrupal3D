@@ -40,7 +40,7 @@ Material:
     m_Floats:
     - _Vigenette_softness: 1.2
     - _Vignette_blur: 2.5
-    - _Vignette_radius: 0
+    - _Vignette_radius: 1
     - _blur: 0.4
     - _vignette_darkenig: 1
     m_Colors:
