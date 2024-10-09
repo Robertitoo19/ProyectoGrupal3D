@@ -11,6 +11,7 @@ public class Effects : MonoBehaviour
 {
     public Material screenDamageMat ;
     private Coroutine screenDamagetask;
+   
 
     private void Update()
     {
