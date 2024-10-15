@@ -115,8 +115,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1851323055247786788}
+  - component: {fileID: 2234482337309180139}
   - component: {fileID: 3314728126100645219}
   - component: {fileID: 3737139616870062546}
+  - component: {fileID: 353568014231720016}
   m_Layer: 0
   m_Name: SistemaCardiograma
   m_TagString: Untagged
@@ -134,12 +136,25 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.07313478, y: 0.07313478, z: 0.07313478}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9012953236193672590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2234482337309180139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8861001588914392027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfaca901f58abe149b0b5c39dc5bfb61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardiogramaAnimator: {fileID: 353568014231720016}
 --- !u!198 &3314728126100645219
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5055,3 +5070,24 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!95 &353568014231720016
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8861001588914392027}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3f8404c107e01c4f92d5c20f4a9ffe4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
