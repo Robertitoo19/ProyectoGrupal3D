@@ -24,5 +24,6 @@ public class AnimacionCardiograma : MonoBehaviour
             cardiogramaAnimator.SetBool("CardiogramToPlayer", false);
             cardiogramaAnimator.SetBool("CardiogramToSide", false);
         }
+        //toca revisar el error de sistema cardioframa no tiene funcionm especifica
     }
 }
