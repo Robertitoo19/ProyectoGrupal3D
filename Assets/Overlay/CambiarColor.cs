@@ -27,15 +27,29 @@ public class CambiarColor : MonoBehaviour
     [SerializeField]public GameObject cardiogramaNaranja;
     [SerializeField]public GameObject cardiogramaRojo;
 
-     void Start()
+     void Update()
     {
-        
+        ChecarVidaPlayer();
     }
     void ChecarVidaPlayer()
     {
         if (player.VidaPlayer > 50 )
         {
-
+            cardiogramaVerde.SetActive(true);
+            cardiogramaNaranja.SetActive(false);
+            cardiogramaRojo.SetActive(false);
+        }
+        else if (player.VidaPlayer <= 50 && player.VidaPlayer >20 )
+        {
+            cardiogramaVerde.SetActive(false);
+            cardiogramaNaranja.SetActive(true);
+            cardiogramaRojo.SetActive(false);
+        }
+        else if(player.VidaPlayer <= 20)
+        {
+            cardiogramaVerde.SetActive(false);
+            cardiogramaNaranja.SetActive(false);
+            cardiogramaRojo.SetActive(true);
         }
     }
 }

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 409691541}
   - component: {fileID: 409691540}
   m_Layer: 0
-  m_Name: CardiogramaAlto (2)
+  m_Name: CardiogramaRojo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,7 +475,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.024727037, g: 0.9528302, b: 0, a: 1}
+      maxColor: {r: 0.9529412, g: 0, b: 0.03448561, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5394,12 +5394,12 @@ GameObject:
   - component: {fileID: 1245648779}
   - component: {fileID: 1245648778}
   m_Layer: 0
-  m_Name: CardiogramaAlto (1)
+  m_Name: CardiogramaNaranja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1245648777
 Transform:
   m_ObjectHideFlags: 0
@@ -10744,6 +10744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac03e008ed8b76347a5f958c5d33d973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 8857531895677776591}
+  cardiogramaVerde: {fileID: 1039505898072164859}
+  cardiogramaNaranja: {fileID: 1245648776}
+  cardiogramaRojo: {fileID: 409691538}
 --- !u!1 &368293941475265691
 GameObject:
   m_ObjectHideFlags: 0
@@ -10862,12 +10866,12 @@ GameObject:
   - component: {fileID: 8105820551577145968}
   - component: {fileID: 8105820551577145969}
   m_Layer: 0
-  m_Name: CardiogramaAlto
+  m_Name: CardiogramaVerde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1290449647890207514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11571,8 +11575,9 @@ GameObject:
   - component: {fileID: 5822006971614737148}
   - component: {fileID: 1328440311277238189}
   - component: {fileID: 5867894989610964583}
+  - component: {fileID: 8857531895677776591}
   m_Layer: 0
-  m_Name: Jhonny
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16680,6 +16685,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5677356733796537007}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8857531895677776591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5677356733796537007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f72bd7c20430d49a4f4709671bc783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaPlayer: 100
 --- !u!224 &9078153419231035055
 RectTransform:
   m_ObjectHideFlags: 0
