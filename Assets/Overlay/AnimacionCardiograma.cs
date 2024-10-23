@@ -5,6 +5,15 @@ using UnityEngine;
 public class AnimacionCardiograma : MonoBehaviour
 {
     public Animator cardiogramaAnimator;
+
+
+    
+
+    void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,4 +35,6 @@ public class AnimacionCardiograma : MonoBehaviour
         }
         //toca revisar el error de sistema cardioframa no tiene funcionm especifica
     }
+
+    
 }
