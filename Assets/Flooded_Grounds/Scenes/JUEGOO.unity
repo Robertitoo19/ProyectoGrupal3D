@@ -2181,6 +2181,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bRAZOS
       objectReference: {fileID: 0}
+    - target: {fileID: 4328944644868436420, guid: 03716fdfb0f95b14f81e0aa1504e4ec7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e34d48c791213840bd83452fb7b186f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
