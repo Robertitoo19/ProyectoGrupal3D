@@ -15,6 +15,7 @@ public class Effects : MonoBehaviour
 
     private void Update()
     {
+        
         if (Input.GetKey(KeyCode.W))
         {
             ScreenDamageEffect(Random.Range(0.1f,1f));

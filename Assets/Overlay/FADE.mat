@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DamageScreen
-  m_Shader: {fileID: -6465566751694194690, guid: 9be67526194412044a5acf2980fb1cb6,
+  m_Name: FADE
+  m_Shader: {fileID: -6465566751694194690, guid: 05dd4f655391027428b630366c9c5387,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,11 +38,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Vigenette_softness: 1.2
-    - _Vignette_blur: 2.5
-    - _Vignette_radius: 1
-    - _blur: 0.4
-    - _vignette_darkenig: 1
-    m_Colors:
-    - _Tint: {r: 0.8867924, g: 0, b: 0, a: 0}
+    - _FadeTime: 0.84
+    m_Colors: []
   m_BuildTextureStacks: []
