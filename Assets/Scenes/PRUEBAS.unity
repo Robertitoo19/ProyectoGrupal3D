@@ -10418,6 +10418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDamageMat: {fileID: -876546973899608171, guid: 9be67526194412044a5acf2980fb1cb6,
     type: 3}
+  player: {fileID: 8857531895677776591}
+  pulsacionVelocidad: 3
+  intensidadPulsacion: 4
 --- !u!1 &1926931387
 GameObject:
   m_ObjectHideFlags: 0
