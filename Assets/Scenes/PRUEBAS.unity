@@ -128,6 +128,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1083872609369454344}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &262746743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3440313025668602808, guid: ff912a79d56db5c45901cafcf1e7cbf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 439284827515315992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &262746749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262746743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d92f554eee14f43aac055500d1d2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velRotacion: 22.01
 --- !u!1 &409691538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,7 +5182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &478825847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5631,7 +5650,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 62.51
+  field of view: 60.7
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -11313,7 +11332,11 @@ PrefabInstance:
     - {fileID: 9141416573423580977, guid: ff912a79d56db5c45901cafcf1e7cbf7, type: 3}
     - {fileID: 5900970654361273434, guid: ff912a79d56db5c45901cafcf1e7cbf7, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3440313025668602808, guid: ff912a79d56db5c45901cafcf1e7cbf7,
+        type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 262746749}
   m_SourcePrefab: {fileID: 100100000, guid: ff912a79d56db5c45901cafcf1e7cbf7, type: 3}
 --- !u!1 &471122004102606794
 GameObject:
