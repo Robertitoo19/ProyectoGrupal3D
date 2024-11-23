@@ -633,6 +633,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 1740014992330137455, guid: f3e03970b48399b458cc3f03d4eb4416,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740014992330137455, guid: f3e03970b48399b458cc3f03d4eb4416,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 4330920652501233492, guid: f3e03970b48399b458cc3f03d4eb4416,
         type: 3}
       propertyPath: m_Name
