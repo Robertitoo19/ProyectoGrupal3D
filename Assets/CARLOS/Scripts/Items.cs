@@ -24,9 +24,10 @@ public class Items : MonoBehaviour
         {
             ComenzarInspeccion();
         }
-        else if (estaEnRango && Input.GetKeyDown(KeyCode.Escape))
+        else if (estaEnRango && Input.GetKeyDown(KeyCode.E))
         {
             TerminarInspeccion();
+            Destroy(gameObject);
         }
     }
 
@@ -35,13 +36,12 @@ public class Items : MonoBehaviour
         estaInspeccionando = true;
         canvasPanel.SetActive(true);
 
-        // Activa el modelo y posiciónalo correctamente para la inspección
+        // Activa el modelo pero no cambies su posición
         itemModel.SetActive(true);
-        itemModel.transform.position = inpeccionPunto.position;
-        itemModel.transform.rotation = Quaternion.identity; // Ajusta la rotación si es necesario
+        itemModel.transform.rotation = Quaternion.identity; // Solo ajustar rotación si es necesario
 
         // Asegúrate de que la cámara de inspección esté activa
-        Camera inspectionCamera = GameObject.Find("Inspection Camera").GetComponent<Camera>();
+        Camera inspectionCamera = GameObject.Find("InspeccionCamara").GetComponent<Camera>();
         if (inspectionCamera != null)
         {
             inspectionCamera.enabled = true;
@@ -49,7 +49,8 @@ public class Items : MonoBehaviour
     }
     private void TerminarInspeccion()
     {
-        Camera inspectionCamera = GameObject.Find("Inspection Camera").GetComponent<Camera>();
+        canvasPanel.SetActive(false);
+        Camera inspectionCamera = GameObject.Find("InspeccionCamara").GetComponent<Camera>();
         if (inspectionCamera != null)
         {
             inspectionCamera.enabled = false;

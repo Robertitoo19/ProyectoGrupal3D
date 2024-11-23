@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8739857880757118927
 Transform:
   m_ObjectHideFlags: 0
@@ -4959,17 +4959,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 212f031ac6f624841a2b419b4b3e5654,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.186106
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 212f031ac6f624841a2b419b4b3e5654,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.27
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 212f031ac6f624841a2b419b4b3e5654,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.233
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 212f031ac6f624841a2b419b4b3e5654,
         type: 3}
@@ -5088,6 +5088,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPanel: {fileID: 0}
-  itemModel: {fileID: 3440313025668602808}
+  itemModel: {fileID: 0}
   inpeccionPunto: {fileID: 0}
   rangoItem: 1.76
