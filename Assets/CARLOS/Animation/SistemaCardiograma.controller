@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: CardiogramToSide
+    m_ConditionEvent: BrazoToSide
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3800181390726055238}
@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: CardiogramToPlayer
+    m_ConditionEvent: BrazoToPlayer
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7370159276855741926}
@@ -72,7 +72,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 972a10db66d32d14bb5b6e414f844b7d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3152bc1a4cdbf104ba525fa07ed6c37e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -87,7 +87,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: CardiogramToSide
+    m_ConditionEvent: BrazoToSide
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3800181390726055238}
@@ -112,13 +112,13 @@ AnimatorController:
   m_Name: SistemaCardiograma
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: CardiogramToPlayer
+  - m_Name: BrazoToPlayer
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: CardiogramToSide
+  - m_Name: BrazoToSide
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -146,7 +146,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: CardiogramToPlayer
+    m_ConditionEvent: BrazoToPlayer
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7370159276855741926}
@@ -171,7 +171,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: CardiogramToSide
+    m_ConditionEvent: BrazoToSide
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4377738882893125214}
@@ -209,7 +209,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 27e362291ba33b5478f0a70b66726288, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1b502bc966824a2459650ca3dc098549, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -224,7 +224,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: CardiogramToPlayer
+    m_ConditionEvent: BrazoToPlayer
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4377738882893125214}
@@ -251,10 +251,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7370159276855741926}
-    m_Position: {x: 440, y: 60, z: 0}
+    m_Position: {x: 480, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3800181390726055238}
-    m_Position: {x: 480, y: 300, z: 0}
+    m_Position: {x: 480, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4377738882893125214}
     m_Position: {x: 190, y: 190, z: 0}
@@ -290,9 +290,9 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6fdb5619cc4086f40aa8438d05a3ba11, type: 2}
+  m_Motion: {fileID: 7400000, guid: b6ed24f1df9fd8d418c22dd6feae0c0f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
-  m_MirrorParameter: CardiogramToPlayer
+  m_MirrorParameter: BrazoToPlayer
   m_CycleOffsetParameter: 
   m_TimeParameter: 

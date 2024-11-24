@@ -19,19 +19,19 @@ public class AnimacionCardiograma : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Q))
         {
-            cardiogramaAnimator.SetBool("CardiogramToPlayer", true);
-            cardiogramaAnimator.SetBool("CardiogramToSide",false);
+            cardiogramaAnimator.SetBool("BrazoToPlayer", true);
+            cardiogramaAnimator.SetBool("BrazoToSide",false);
 
         }
         else 
         {
-            cardiogramaAnimator.SetBool("CardiogramToPlayer", false);
-            cardiogramaAnimator.SetBool("CardiogramToSide", true);
+            cardiogramaAnimator.SetBool("BrazoToPlayer", false);
+            cardiogramaAnimator.SetBool("BrazoToSide", true);
         }
-        if(!Input.GetKey(KeyCode.Q) && cardiogramaAnimator.GetBool("CardiogramToSide") == false)
+        if(!Input.GetKey(KeyCode.Q) && cardiogramaAnimator.GetBool("BrazoToSide") == false)
         {
-            cardiogramaAnimator.SetBool("CardiogramToPlayer", false);
-            cardiogramaAnimator.SetBool("CardiogramToSide", false);
+            cardiogramaAnimator.SetBool("BrazoToPlayer", false);
+            cardiogramaAnimator.SetBool("BrazoToSide", false);
         }
         //toca revisar el error de sistema cardioframa no tiene funcionm especifica
     }
