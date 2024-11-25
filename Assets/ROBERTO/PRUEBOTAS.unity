@@ -464,44 +464,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2459a6af98a1eae4ebc79b1ffd638762, type: 3}
---- !u!1 &652210523 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2552993999405100865, guid: f3e03970b48399b458cc3f03d4eb4416,
+--- !u!198 &1643576191 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6619034762841572468, guid: f3e03970b48399b458cc3f03d4eb4416,
     type: 3}
   m_PrefabInstance: {fileID: 1864408907}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &652210525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652210523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e75df776539954185bb051d35b77c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myData: {fileID: 11400000, guid: b7199cae4c37d2845974aacb59945f28, type: 2}
---- !u!1 &1550842422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4330920652501233492, guid: f3e03970b48399b458cc3f03d4eb4416,
-    type: 3}
-  m_PrefabInstance: {fileID: 1864408907}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1550842430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550842422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f72bd7c20430d49a4f4709671bc783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidaPlayer: 100
 --- !u!1 &1692324084
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,21 +596,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 176645377713954413, guid: f3e03970b48399b458cc3f03d4eb4416,
+    - target: {fileID: 2865422563646708203, guid: f3e03970b48399b458cc3f03d4eb4416,
         type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 1740014992330137455, guid: f3e03970b48399b458cc3f03d4eb4416,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1740014992330137455, guid: f3e03970b48399b458cc3f03d4eb4416,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
-      objectReference: {fileID: 0}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1643576191}
     - target: {fileID: 4330920652501233492, guid: f3e03970b48399b458cc3f03d4eb4416,
         type: 3}
       propertyPath: m_Name
@@ -701,15 +659,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4330920652501233492, guid: f3e03970b48399b458cc3f03d4eb4416,
-        type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 1550842430}
-    - targetCorrespondingSourceObject: {fileID: 2552993999405100865, guid: f3e03970b48399b458cc3f03d4eb4416,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 652210525}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e03970b48399b458cc3f03d4eb4416, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

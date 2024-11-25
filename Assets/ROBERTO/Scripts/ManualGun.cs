@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering.VirtualTexturing;
 
 public class ManualGun : MonoBehaviour
 {
     [SerializeField] private ArmaSO myData;
 
     private Camera cam;
+
+    [SerializeField] ParticleSystem particles;
     void Start()
     {
         cam = Camera.main;
@@ -16,7 +19,8 @@ public class ManualGun : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, myData.attackDistance))
+            particles.Play();
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, myData.attackDistance))
             {
                 Debug.Log(hitInfo.transform.name);
             }

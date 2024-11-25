@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class Player : MonoBehaviour
 {
@@ -8,15 +9,16 @@ public class Player : MonoBehaviour
 
     public int VidaPlayer { get => vidaPlayer; set => vidaPlayer = value; }
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    public void ReceiveDamage(int enemyDamage)
+    {
+        vidaPlayer -= enemyDamage;
     }
 }

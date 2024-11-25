@@ -9,6 +9,15 @@ public class Enemy : MonoBehaviour
     private Player player;
     private Animator anim;
 
+    [Header("-----Sistema Combate-----")]
+    private bool OpenWindow;
+    [SerializeField] private Transform AttackPoint;
+    [SerializeField] private float detectionRatio;
+    [SerializeField] private LayerMask WhatIsDamagable;
+    [SerializeField] private int enemyDamage;
+    private bool canDamage;
+
+    [SerializeField] private float livesEnemy;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -20,6 +29,10 @@ public class Enemy : MonoBehaviour
         if (agent.enabled)
         {
             Follow();
+        }
+        if (OpenWindow && canDamage)
+        {
+            DetectImpact();
         }
     }
 
@@ -35,5 +48,34 @@ public class Enemy : MonoBehaviour
             //activar anim.
             anim.SetBool("isAttacking", true);
         }
+    }
+    private void DetectImpact()
+    {
+        //detectar colliders.
+        Collider[] collDetectates = Physics.OverlapSphere(AttackPoint.position, detectionRatio, WhatIsDamagable);
+        //si ha detectado algo en el ataque.
+        if (collDetectates.Length > 0)
+        {
+            //aplicas daño a cada colllider
+            for (int i = 0; i < collDetectates.Length; i++)
+            {
+                collDetectates[i].GetComponent<Player>().ReceiveDamage(enemyDamage);
+            }
+            canDamage = false;
+        }
+    }
+    private void EndAttack()
+    {
+        agent.isStopped = false;
+        anim.SetBool("isAttacking", false);
+        canDamage = true;
+    }
+    private void OpenAttackWindow()
+    {
+        OpenWindow = true;
+    }
+    private void CloseAttackWindow()
+    {
+        OpenWindow = false;
     }
 }
