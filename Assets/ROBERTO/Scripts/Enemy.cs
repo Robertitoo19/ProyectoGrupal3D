@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour
     private bool canDamage;
 
     [SerializeField] private float livesEnemy;
+
+    public float LivesEnemy { get => livesEnemy; set => livesEnemy = value; }
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();

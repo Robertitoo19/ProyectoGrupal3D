@@ -22,7 +22,10 @@ public class ManualGun : MonoBehaviour
             particles.Play();
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, myData.attackDistance))
             {
-                Debug.Log(hitInfo.transform.name);
+                if (hitInfo.transform.CompareTag("EnemyPart"))
+                {
+                    hitInfo.transform.GetComponent<EnemyPart>().ReceiveDamageEnemy(myData.attackDamage);
+                }
             }
         }
     }
