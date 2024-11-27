@@ -89,12 +89,12 @@ public class Effects : MonoBehaviour
         }
         else if (player.VidaPlayer <= 20 && player.VidaPlayer > 10)
         {
-            intensidadPulsacion = Mathf.Lerp(intensidadPulsacion, Random.Range(0.6f, 0.9f), Time.deltaTime);
+            intensidadPulsacion = Mathf.Lerp(intensidadPulsacion, Random.Range(0.6f, 0.7f), Time.deltaTime);
 
         }
         else if (player.VidaPlayer <= 10)
         {
-            intensidadPulsacion = Mathf.Lerp(intensidadPulsacion, Random.Range(0.9f, 1f), Time.deltaTime);
+            intensidadPulsacion = Mathf.Lerp(intensidadPulsacion, Random.Range(0.8f,0.9f), Time.deltaTime);
         }
         else
         {
