@@ -7,6 +7,7 @@ TagManager:
   - Llave
   - itemOnly
   - Enemy
+  - EnemyPart
   layers:
   - Default
   - TransparentFX
