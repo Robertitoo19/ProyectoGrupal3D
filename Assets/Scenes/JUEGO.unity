@@ -8622,7 +8622,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -1.19, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0002772842, y: -3.4616628, z: 0.00020476372}
+  m_ConnectedAnchor: {x: -0.0002772842, y: 1.0083795, z: 0.00024998237}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -22295,7 +22295,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -1.19, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0002772842, y: -3.3883853, z: -0.00007849276}
+  m_ConnectedAnchor: {x: -0.0002772842, y: 1.1484225, z: -0.000033274107}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -46240,6 +46240,7 @@ PrefabInstance:
     - {fileID: 212639632207759298, guid: 4f72916b2787e5241b6358d3027b505e, type: 3}
     - {fileID: -5601892944919450474, guid: 4f72916b2787e5241b6358d3027b505e, type: 3}
     - {fileID: -6644622156178490245, guid: 4f72916b2787e5241b6358d3027b505e, type: 3}
+    - {fileID: -3880860054674852824, guid: 4f72916b2787e5241b6358d3027b505e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f72916b2787e5241b6358d3027b505e, type: 3}
@@ -49138,7 +49139,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -1.19, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.09632942, y: 0.07511397, z: 0.5711491}
+  m_ConnectedAnchor: {x: -0.0002772842, y: 1.0816607, z: -0.0002064701}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -53698,7 +53699,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -1.07, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 472.86548, y: 32.88973, z: 508.0271}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -76517,7 +76518,7 @@ HingeJoint:
   m_Anchor: {x: 0.11, y: 0.1, z: 0.38}
   m_Axis: {x: 0, y: 1, z: 23.24}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 472.37106, y: 30.49819, z: 508.07877}
+  m_ConnectedAnchor: {x: -0.85208076, y: 0.95122606, z: -2.9278126}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
