@@ -18,7 +18,7 @@ public class EnemyPart : MonoBehaviour
 
         if (mainScript.LivesEnemy <= 0)
         {
-            //mainScript.Dead();
+            mainScript.Dead();
         }
     }
 }

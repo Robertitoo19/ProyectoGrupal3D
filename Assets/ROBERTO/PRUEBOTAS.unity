@@ -404,106 +404,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 20633361111499565, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 274472088856596527, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 372151979705114680, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1172092456505964785, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259532924781076552, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1399498488091699346, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694249475397940200, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2050442103354014421, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256168533112776411, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492546839117898265, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2625233559458003988, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2977441371205759034, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130239936307134395, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206759495860342731, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5234604350710755710, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5517456143658707387, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6466206280533377572, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025809905408680080, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193826659225763609, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8320651239064704964, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8326678481101050231, guid: 2459a6af98a1eae4ebc79b1ffd638762,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -558,16 +458,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BookHeadMonster_withBlood
-      objectReference: {fileID: 0}
-    - target: {fileID: 8859975072207247675, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916005367159609426, guid: 2459a6af98a1eae4ebc79b1ffd638762,
-        type: 3}
-      propertyPath: damageMultiply
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
