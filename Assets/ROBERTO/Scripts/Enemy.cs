@@ -9,13 +9,16 @@ public class Enemy : MonoBehaviour
     private Player player;
     private Animator anim;
 
-    [Header("-----Sistema Combate-----")]
     private bool OpenWindow;
+    [Header("-----Sistema Combate-----")]
     [SerializeField] private Transform AttackPoint;
     [SerializeField] private float detectionRatio;
     [SerializeField] private LayerMask WhatIsDamagable;
     [SerializeField] private int enemyDamage;
     private bool canDamage;
+
+    Rigidbody[] joints;
+    private bool isDead = false;
 
     [SerializeField] private float livesEnemy;
 
@@ -26,6 +29,9 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindObjectOfType<Player>();
         anim = GetComponent<Animator>();
+
+        joints = GetComponentsInChildren<Rigidbody>();
+        ChangeJointsState(true);
     }
     void Update()
     {
@@ -50,7 +56,19 @@ public class Enemy : MonoBehaviour
             agent.isStopped = true;
             //activar anim.
             anim.SetBool("isAttacking", true);
+            AimObjetive();
         }
+    }
+    private void AimObjetive()
+    {
+        //sacar vector que mira al player desde nuestra posicion.
+        Vector3 objetiveDirection = (player.transform.position - transform.position).normalized;
+        //enemigo no se tumbe.
+        objetiveDirection.y = 0;
+        //calcular rotacion para conseguir rotacion.
+        Quaternion objetiveRotation = Quaternion.LookRotation(objetiveDirection);
+
+        transform.rotation = objetiveRotation;
     }
     private void DetectImpact()
     {
@@ -80,5 +98,22 @@ public class Enemy : MonoBehaviour
     private void CloseAttackWindow()
     {
         OpenWindow = false;
+    }
+    private void ChangeJointsState(bool State)
+    {
+        for (int i = 0; i < joints.Length; i++)
+        {
+            joints[i].isKinematic = State;
+        }
+    }
+    public void Dead()
+    {
+        if (!isDead) 
+        {
+            ChangeJointsState(false);
+            anim.enabled = false;
+            agent.enabled = false;
+            isDead = true;
+        }
     }
 }

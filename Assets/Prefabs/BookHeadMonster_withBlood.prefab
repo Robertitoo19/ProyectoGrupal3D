@@ -80,7 +80,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 3
 --- !u!144 &8702061239059711872
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &7069403649615615983
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1390,7 +1390,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &4991178677546345179
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2500,7 +2500,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &963949168274991463
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2644,7 +2644,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2661,7 +2661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &6749131903712637081
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2853,7 +2853,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!1 &6628047416908520605
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,7 +3050,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3067,7 +3067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &6468977945171563619
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3230,7 +3230,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3247,7 +3247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &2060118274567011089
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3378,7 +3378,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3395,7 +3395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &5545440468771404464
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3619,7 +3619,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3636,7 +3636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &7636995298070702420
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -4215,7 +4215,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4232,7 +4232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 9209217764237550323}
-  damageMultiply: 0
+  damageMultiply: 1
 --- !u!144 &4918144077182993572
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -4291,8 +4291,6 @@ GameObject:
   - component: {fileID: 9209217764237550323}
   - component: {fileID: 3831314358217703713}
   - component: {fileID: 751543578250326753}
-  - component: {fileID: 7427817146525814557}
-  - component: {fileID: 6432101921945517809}
   m_Layer: 0
   m_Name: BookHeadMonster_withBlood
   m_TagString: Enemy
@@ -4382,56 +4380,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!54 &7427817146525814557
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702534868499336141}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &6432101921945517809
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702534868499336141}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5393631
-  m_Height: 1.8445204
-  m_Direction: 1
-  m_Center: {x: 0.010735382, y: 0.88745725, z: 0.057255268}
 --- !u!1 &8722972376299176981
 GameObject:
   m_ObjectHideFlags: 0
