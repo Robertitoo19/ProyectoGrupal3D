@@ -30545,7 +30545,7 @@ GameObject:
   - component: {fileID: 692553172}
   - component: {fileID: 692553171}
   m_Layer: 0
-  m_Name: r
+  m_Name: eje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30560,7 +30560,7 @@ Transform:
   m_GameObject: {fileID: 692553169}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.48855388, y: 0, z: 0}
+  m_LocalPosition: {x: 0.48856026, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40343,8 +40343,7 @@ Transform:
   m_LocalPosition: {x: 468.896, y: 26.93, z: 513.88214}
   m_LocalScale: {x: 0.71715, y: 0.6924023, z: 0.7364986}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1693959119}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &965016807 stripped
@@ -66586,7 +66585,7 @@ GameObject:
   - component: {fileID: 1693959119}
   - component: {fileID: 1693959120}
   m_Layer: 0
-  m_Name: Tapa
+  m_Name: tapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66601,12 +66600,12 @@ Transform:
   m_GameObject: {fileID: 1693959118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.01175256, w: 0.999931}
-  m_LocalPosition: {x: -0.637, y: 0.5260011, z: 0}
-  m_LocalScale: {x: 1.303848, y: 0.093380995, z: 0.85222006}
+  m_LocalPosition: {x: 468.43918, y: 27.294205, z: 513.88214}
+  m_LocalScale: {x: 0.93503666, y: 0.064658485, z: 0.6276589}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 692553170}
-  m_Father: {fileID: 964195069}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.347}
 --- !u!95 &1693959120
 Animator:
@@ -110307,4 +110306,5 @@ SceneRoots:
   - {fileID: 663088166}
   - {fileID: 5606960339344885571}
   - {fileID: 964195069}
+  - {fileID: 1693959119}
   - {fileID: 823317187}
