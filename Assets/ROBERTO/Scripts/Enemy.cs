@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float detectionRatio;
     [SerializeField] private LayerMask WhatIsDamagable;
     [SerializeField] private int enemyDamage;
-    private bool canDamage;
+    private bool canDamage = true;
 
     Rigidbody[] joints;
     private bool isDead = false;
