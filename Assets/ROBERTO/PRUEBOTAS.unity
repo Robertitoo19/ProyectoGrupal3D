@@ -3340,7 +3340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1692324085
 Light:
   m_ObjectHideFlags: 0
@@ -3749,7 +3749,7 @@ PrefabInstance:
     - target: {fileID: 6061447998127568395, guid: f3e03970b48399b458cc3f03d4eb4416,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.43
+      value: 1.6095
       objectReference: {fileID: 0}
     - target: {fileID: 6061447998127568395, guid: f3e03970b48399b458cc3f03d4eb4416,
         type: 3}
@@ -3790,17 +3790,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606783616010364005, guid: f3e03970b48399b458cc3f03d4eb4416,
-        type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 11400000, guid: 42fc8fe02ff98fc4aba3ab6900555bd7,
-        type: 2}
-    - target: {fileID: 6606783616010364005, guid: f3e03970b48399b458cc3f03d4eb4416,
-        type: 3}
-      propertyPath: interactionDistance
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
