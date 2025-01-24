@@ -25,6 +25,7 @@ public class EnemyV2 : MonoBehaviour
     {
         this.target = target;
 
+        patroll.enabled = false;
         combat.enabled = true;
     }
     public void ActivePatroll()

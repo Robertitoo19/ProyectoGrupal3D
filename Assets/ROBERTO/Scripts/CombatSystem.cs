@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,10 @@ public class CombatSystem : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float combatVelocity;
     [SerializeField] private float attackDistance;
+    [SerializeField] private float detectionRadius;
     [SerializeField] private Animator anim;
+
+    private bool isAttacking = false;
 
     private void Awake()
     {
@@ -22,22 +26,70 @@ public class CombatSystem : MonoBehaviour
     }
     void Update()
     {
-        if (mainScript != null && agent.CalculatePath(mainScript.Target.position, new NavMeshPath()))
+        if (mainScript.Target != null && mainScript.Target.gameObject.activeSelf)
         {
-            AimObjetive();
+            float distanceToTarget = Vector3.Distance(transform.position, mainScript.Target.position);
 
-            agent.SetDestination(mainScript.Target.position);
-
-            if(!agent.pathPending && agent.remainingDistance <= attackDistance)
+            // Verificar si el objetivo está dentro del rango de detección
+            if (distanceToTarget <= detectionRadius)
             {
-                anim.SetBool("isAttacking", true);
+                // Perseguir al objetivo
+                AimObjetive();
+                agent.SetDestination(mainScript.Target.position);
+
+                // Verificar si está dentro de la distancia para atacar
+                if (!agent.pathPending && agent.remainingDistance <= attackDistance)
+                {
+                    if (!isAttacking)
+                    {
+                        anim.SetBool("isAttacking", true);
+                        isAttacking = true;
+                    }
+                }
+                else if (isAttacking)
+                {
+                    anim.SetBool("isAttacking", false);
+                    isAttacking = false;
+                }
+            }
+            else
+            {
+                // El objetivo está fuera del rango de detección, volver a patrullar
+                ExitCombat();
             }
         }
         else
         {
-            mainScript.ActivePatroll();
+            // El objetivo es nulo o inválido, volver a patrullar
+            ExitCombat();
         }
+        //if (mainScript != null && agent.CalculatePath(mainScript.Target.position, new NavMeshPath()))
+        //{
+        //    AimObjetive();
+
+        //    agent.SetDestination(mainScript.Target.position);
+
+        //    if(!agent.pathPending && agent.remainingDistance <= attackDistance)
+        //    {
+        //        if (!isAttacking)
+        //        {
+        //            anim.SetBool("isAttacking", true);
+        //            isAttacking = true;
+        //        }
+        //    }
+        //    else if (isAttacking)
+        //    {
+        //        anim.SetBool("isAttacking", false);
+        //        isAttacking = false;
+        //    }
+        //}
+        //else
+        //{
+        //    mainScript.ActivePatroll();
+        //}
     }
+
+
     private void AimObjetive()
     {
         Vector3 targetDirection = (mainScript.Target.position - transform.position).normalized;
@@ -45,14 +97,26 @@ public class CombatSystem : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         transform.rotation = targetRotation;
     }
+    private void ExitCombat()
+    {
+        anim.SetBool("isAttacking", false);
+        isAttacking = false;
+        mainScript.Target = null; // El objetivo deja de ser válido
+        mainScript.ActivePatroll();
+    }
     #region Eventos Animacion
     private void Attack()
     {
-
+        if (mainScript.Target != null)
+        {
+            Debug.Log("Ataca");
+        }
     }
     private void EndAttack()
     {
-
+        anim.SetBool("isAttacking", false);
+        isAttacking = false;
+        Debug.Log("Para de atacar");
     }
     #endregion
 }
