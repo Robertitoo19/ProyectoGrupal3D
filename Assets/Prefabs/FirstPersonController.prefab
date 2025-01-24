@@ -5253,6 +5253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaPlayer: 100
   linterna: {fileID: 1574194240340310214}
+  alturaMinimaCaida: 0
+  alturaMaximaCaida: 0
 --- !u!114 &6971310337762871894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5284,14 +5286,14 @@ MonoBehaviour:
   zoomFOV: 30
   zoomStepTime: 5
   playerCanMove: 1
-  walkSpeed: 5
+  walkSpeed: 3.5
   maxVelocityChange: 10
   enableSprint: 1
-  unlimitedSprint: 1
+  unlimitedSprint: 0
   sprintKey: 304
-  sprintSpeed: 7
-  sprintDuration: 5
-  sprintCooldown: 0.5
+  sprintSpeed: 6
+  sprintDuration: 3
+  sprintCooldown: 1.5
   sprintFOV: 80
   sprintFOVStepTime: 8
   useSprintBar: 1
@@ -5302,7 +5304,7 @@ MonoBehaviour:
   sprintBarHeightPercent: 0.02
   enableJump: 1
   jumpKey: 32
-  jumpPower: 4
+  jumpPower: 3
   enableCrouch: 1
   holdToCrouch: 1
   crouchKey: 306
@@ -6075,7 +6077,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3558767873222466427
 CanvasRenderer:
