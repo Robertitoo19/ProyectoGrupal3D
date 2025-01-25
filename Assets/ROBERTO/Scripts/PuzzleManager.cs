@@ -6,7 +6,7 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager instance;
 
-    [SerializeField] private int[] correctPassword = new int[4] { 1, 2, 3, 4};
+    [SerializeField] private int[] correctPassword;
    private void Awake()
     {
         if (instance == null)
