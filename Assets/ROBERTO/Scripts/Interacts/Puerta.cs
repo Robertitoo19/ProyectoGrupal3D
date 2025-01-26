@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puerta : MonoBehaviour, IInteractable
+public class Puerta1 : MonoBehaviour, IInteractable
 {
     private Animator anim;
 
