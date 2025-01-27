@@ -63,30 +63,6 @@ public class CombatSystem : MonoBehaviour
             // El objetivo es nulo o inválido, volver a patrullar
             ExitCombat();
         }
-        //if (mainScript != null && agent.CalculatePath(mainScript.Target.position, new NavMeshPath()))
-        //{
-        //    AimObjetive();
-
-        //    agent.SetDestination(mainScript.Target.position);
-
-        //    if(!agent.pathPending && agent.remainingDistance <= attackDistance)
-        //    {
-        //        if (!isAttacking)
-        //        {
-        //            anim.SetBool("isAttacking", true);
-        //            isAttacking = true;
-        //        }
-        //    }
-        //    else if (isAttacking)
-        //    {
-        //        anim.SetBool("isAttacking", false);
-        //        isAttacking = false;
-        //    }
-        //}
-        //else
-        //{
-        //    mainScript.ActivePatroll();
-        //}
     }
 
 

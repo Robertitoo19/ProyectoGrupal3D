@@ -8,10 +8,10 @@ public class ParpadeoLuz : MonoBehaviour
     void Start()
     {
         luz = GetComponent<Light>();
+        StartCoroutine(Parpadeo());
     }
     private void Update()
     {
-        StartCoroutine(Parpadeo());
         
     }
     private IEnumerator Parpadeo()
@@ -19,9 +19,9 @@ public class ParpadeoLuz : MonoBehaviour
         while (true)
         {
             luz.enabled = true;
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(Random.Range(0f, 0.15f));
             luz.enabled = false;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(Random.Range(0f, 0.10f));
         }
     }
 }
