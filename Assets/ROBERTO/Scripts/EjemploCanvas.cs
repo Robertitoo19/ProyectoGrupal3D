@@ -27,8 +27,6 @@ public class EjemploCanvas : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
