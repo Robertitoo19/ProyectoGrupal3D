@@ -86,7 +86,7 @@ public class PatrollSystem : MonoBehaviour
             CalculateDestination();
             agent.SetDestination(actualDestination);
 
-            yield return new WaitUntil(() => !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance);
+            yield return new WaitUntil( () => !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance);
 
             yield return new WaitForSeconds(Random.Range(0.25f, 2f));
         }
