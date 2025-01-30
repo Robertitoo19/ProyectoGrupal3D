@@ -5,6 +5,17 @@ using static Cinemachine.DocumentationSortingAttribute;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameObject[] items;
+    [SerializeField] private bool[] tieneItem;
+    private GameObject equiparItem;
+    bool estaCambiandoItem = false;
+    int itemNº = -1;
+
+    private Animator anim;
+
+    public int ItemNº { get => itemNº; set => itemNº = value; }
+    public GameObject[] Items { get => items; set => items = value; }
+
     [SerializeField] int vidaPlayer;
 
     [SerializeField] Light linterna;
@@ -12,12 +23,14 @@ public class Player : MonoBehaviour
     [SerializeField] public float alturaMinimaCaida;
     [SerializeField] private float alturaMaximaCaida;
     private Rigidbody rb;
+    private Inventario inv;
     
     public int VidaPlayer { get => vidaPlayer; set => vidaPlayer = value; }
 
     void Start()
     {
-        rb= GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
         alturaMaximaCaida = transform.position.y;
     }
     void Update()
@@ -54,6 +67,48 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             linterna.enabled = !linterna.enabled;
+        }
+    }
+    
+    public void CambiarArma()
+    {
+        int itemNº = -1;
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            itemNº = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            itemNº = 1;
+        }
+        else if ((Input.GetKeyDown(KeyCode.Alpha3)))
+        {
+            itemNº = 2;
+        }
+        if (itemNº >= 0 && itemNº < Items.Length && tieneItem[itemNº])
+        {
+            if (equiparItem != null)
+            {
+                Items[itemNº].SetActive(false);
+                equiparItem.SetActive(false);
+            }
+
+            equiparItem = Items[itemNº];
+            Items[itemNº].SetActive(true);
+
+            anim.SetTrigger("swap");
+            estaCambiandoItem = true;
+
+            Invoke("TerminarCambiarArma", 0.4f);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Objeto1"))
+        {
+            Items item = other.GetComponent<Items>();
+
+            //int itenmNº = item.Valor;
         }
     }
 }
