@@ -5,23 +5,25 @@ using UnityEngine;
 public class Inventario : MonoBehaviour
 {
     [SerializeField] private GameObject[] items;
-    [SerializeField] private bool tieneItem;
+    [SerializeField] private bool[] tieneItem;
     private GameObject equiparItem;
+    bool estaCambiandoItem = false;
     int itemNº = -1;
 
+    private Animator anim;
 
     public int ItemNº { get => itemNº; set => itemNº = value; }
 
     private void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
     public void CambiarArma()
     {
         int itemNº = -1;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-             itemNº= 0;
+            itemNº = 0;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -42,8 +44,8 @@ public class Inventario : MonoBehaviour
             equiparItem = items[itemNº];
             items[itemNº].SetActive(true);
 
-            animator.SetTrigger("swap");
-            estaCambiandoArma = true;
+            anim.SetTrigger("swap");
+            estaCambiandoItem = true;
 
             Invoke("TerminarCambiarArma", 0.4f);
         }
