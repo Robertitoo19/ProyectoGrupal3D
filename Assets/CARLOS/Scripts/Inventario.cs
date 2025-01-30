@@ -13,6 +13,7 @@ public class Inventario : MonoBehaviour
     private Animator anim;
 
     public int ItemNº { get => itemNº; set => itemNº = value; }
+    public GameObject[] Items { get => items; set => items = value; }
 
     private void Start()
     {
@@ -33,16 +34,16 @@ public class Inventario : MonoBehaviour
         {
             itemNº = 2;
         }
-        if (itemNº >= 0 && itemNº < items.Length && tieneItem[itemNº])
+        if (itemNº >= 0 && itemNº < Items.Length && tieneItem[itemNº])
         {
             if (equiparItem != null)
             {
-                items[itemNº].SetActive(false);
+                Items[itemNº].SetActive(false);
                 equiparItem.SetActive(false);
             }
 
-            equiparItem = items[itemNº];
-            items[itemNº].SetActive(true);
+            equiparItem = Items[itemNº];
+            Items[itemNº].SetActive(true);
 
             anim.SetTrigger("swap");
             estaCambiandoItem = true;

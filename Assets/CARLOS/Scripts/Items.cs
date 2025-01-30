@@ -10,6 +10,10 @@ public class Items : MonoBehaviour
     [SerializeField] float rangoItem;
      private bool estaEnRango = false;
      private bool estaInspeccionando = false;
+    [SerializeField] private float velocidadRotacion;
+
+
+    [SerializeField]private enum Type { Objeto}
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,7 @@ public class Items : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (estaEnRango && !estaInspeccionando && Input.GetKeyDown(KeyCode.E))
         {
             ComenzarInspeccion();
