@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
 {
+    [SerializeField]
+    private EventManagerSO eventManager;
+
     private Animator anim;
     private bool isOpen = false;
     void Start()
@@ -12,6 +15,11 @@ public class Chest : MonoBehaviour, IInteractable
     }
 
     public void Interact()
+    {
+        //Se activa el paneñl.
+        eventManager.ChestInteracted();
+    }
+    public void Open()
     {
         if (!isOpen)
         {

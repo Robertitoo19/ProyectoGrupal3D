@@ -16,4 +16,9 @@ public class EventManagerSO : ScriptableObject
     {
         OnNoInteractuable?.Invoke();
     }
+
+    public void ChestInteracted()
+    {
+        throw new NotImplementedException();
+    }
 }

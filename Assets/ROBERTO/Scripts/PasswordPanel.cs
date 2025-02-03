@@ -17,12 +17,12 @@ public class PasswordPanel : MonoBehaviour
         //Validar la contraseña con el PuzzleManager
         if (PuzzleManager.instance.ValidatePassword(input))
         {
-            chest.GetComponent<Chest>().Interact();
-            feedBackText.text = "Correcto! El cofre se está abriendo...";
+            chest.GetComponent<Chest>().Open();
+            feedBackText.text = "Correct The chest is opening...";
         }
         else
         {
-            feedBackText.text = "Contraseña incorrecta.";
+            feedBackText.text = "Incorrect password.";
         }
     }
 }
