@@ -8,6 +8,7 @@ TagManager:
   - itemOnly
   - Enemy
   - EnemyPart
+  - Objeto1
   layers:
   - Default
   - TransparentFX

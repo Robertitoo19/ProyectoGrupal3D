@@ -24,8 +24,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float alturaMaximaCaida;
     private Rigidbody rb;
     private Inventario inv;
+
+
+
     
     public int VidaPlayer { get => vidaPlayer; set => vidaPlayer = value; }
+    public bool[] TieneItem { get => tieneItem; set => tieneItem = value; }
 
     void Start()
     {
@@ -54,6 +58,22 @@ public class Player : MonoBehaviour
             alturaMaximaCaida =transform.position.y;
         }
     }
+    public void AñadirItemAlInventario(int index, GameObject objeto)
+    {
+        if (index >= 0 && index < items.Length)
+        {
+            // Activar el flag de inventario
+            tieneItem[index] = true;
+            Debug.Log($"Ítem {index} añadido al inventario.");
+
+            // Destruir el objeto de la escena si corresponde
+            Destroy(objeto);
+        }
+        else
+        {
+            Debug.LogWarning("Índice fuera de rango. No se puede añadir al inventario.");
+        }
+    }
     bool estaCayendo()
     {
         return Physics.Raycast(transform.position, Vector3.down, 5f);
@@ -72,35 +92,43 @@ public class Player : MonoBehaviour
     
     public void CambiarArma()
     {
-        int itemNº = -1;
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        int nuevoItemNº = -1;
+
+        // Detectar la tecla presionada
+        if (Input.GetKeyDown(KeyCode.Alpha1)) nuevoItemNº = 0;
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) nuevoItemNº = 1;
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) nuevoItemNº = 2;
+        else if (Input.GetKeyDown(KeyCode.Alpha4)) nuevoItemNº = 3;
+        else if (Input.GetKeyDown(KeyCode.Alpha5)) nuevoItemNº = 4;
+
+        // Validar el índice y si el ítem está desbloqueado
+        if (nuevoItemNº >= 0 && nuevoItemNº < items.Length && tieneItem[nuevoItemNº])
         {
-            itemNº = 0;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            itemNº = 1;
-        }
-        else if ((Input.GetKeyDown(KeyCode.Alpha3)))
-        {
-            itemNº = 2;
-        }
-        if (itemNº >= 0 && itemNº < Items.Length && tieneItem[itemNº])
-        {
+            // Si ya está equipado, no hacer nada
+            if (equiparItem == items[nuevoItemNº])
+                return;
+
+            // Desactivar el ítem actualmente equipado (si existe)
             if (equiparItem != null)
             {
-                Items[itemNº].SetActive(false);
                 equiparItem.SetActive(false);
             }
 
-            equiparItem = Items[itemNº];
-            Items[itemNº].SetActive(true);
+            // Activar el nuevo ítem y asignarlo como el actual
+            equiparItem = items[nuevoItemNº];
+            equiparItem.SetActive(true);
 
+            // Opcional: Lanzar animación de cambio de arma
             anim.SetTrigger("swap");
             estaCambiandoItem = true;
 
+            // Temporizador para finalizar el cambio de arma
             Invoke("TerminarCambiarArma", 0.4f);
         }
+    }
+    private void TerminarCambiarArma()
+    {
+        estaCambiandoItem = false;
     }
     private void OnTriggerEnter(Collider other)
     {

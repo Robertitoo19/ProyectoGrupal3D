@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8090878690827996397}
   - component: {fileID: 5302509531808531335}
   - component: {fileID: 8211225967091002292}
+  - component: {fileID: 7598483495931532771}
   m_Layer: 0
   m_Name: Objeto 3_Collider
-  m_TagString: Untagged
+  m_TagString: Objeto1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2450750919784348363}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.49573904, y: -0.5042248, z: 0.49573886, w: 0.5042254}
+  m_LocalRotation: {x: -0.495741, y: -0.50422305, z: 0.495741, w: 0.50422305}
   m_LocalPosition: {x: 2.226, y: 0.728, z: 5.999}
   m_LocalScale: {x: 0.8217134, y: 0.031716958, z: 0.28475985}
   m_ConstrainProportionsScale: 0
@@ -108,6 +109,25 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &7598483495931532771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450750919784348363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83af74f5a6b879a4daa382b993c3d273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemIndex: 3
+  itemName: Objeto3
+  canvasPanel: {fileID: 0}
+  itemModel: {fileID: 0}
+  inpeccionPunto: {fileID: 0}
+  rangoItem: 5
+  velocidadRotacion: 5
 --- !u!1 &7017461915936403966
 GameObject:
   m_ObjectHideFlags: 0
