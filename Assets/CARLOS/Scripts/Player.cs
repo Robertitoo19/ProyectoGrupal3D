@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Has Caido Muy alto");
             vidaPlayer = 0;
+            anim.SetTrigger("die");
         }
         if(estaCayendo())
         {
