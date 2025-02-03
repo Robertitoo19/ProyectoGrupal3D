@@ -17,7 +17,7 @@ public class PasswordPanel : MonoBehaviour
         //Validar la contraseña con el PuzzleManager
         if (PuzzleManager.instance.ValidatePassword(input))
         {
-            chest.GetComponent<Chest>().OpenChest();
+            chest.GetComponent<Chest>().Interact();
             feedBackText.text = "Correcto! El cofre se está abriendo...";
         }
         else

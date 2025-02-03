@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : MonoBehaviour
+public class Chest : MonoBehaviour, IInteractable
 {
     private Animator anim;
     private bool isOpen = false;
@@ -10,7 +10,8 @@ public class Chest : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    public void OpenChest()
+
+    public void Interact()
     {
         if (!isOpen)
         {
