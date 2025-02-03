@@ -12,72 +12,37 @@ public class Items : MonoBehaviour
     [SerializeField] private GameObject itemModel;
     [SerializeField] private Transform inspeccionPunto;
     [SerializeField] private float rangoItem = 2f;
-    [SerializeField] private float velocidadRotacion = 50f;
 
     private bool estaEnRango = false;
-    private bool estaInspeccionando = false;
 
-    public int ItemIndex => itemIndex; // Propiedad para acceder al índice
+    public int ItemIndex => itemIndex;
     public string ItemName => itemName;
 
     private void Update()
     {
-        // Comenzar inspección
-        if (estaEnRango && !estaInspeccionando && Input.GetKeyDown(KeyCode.E))
+        if (estaEnRango && Input.GetKeyDown(KeyCode.E))
         {
-            ComenzarInspeccion();
-        }
-        // Terminar inspección y recoger el objeto
-        else if (estaInspeccionando && Input.GetKeyDown(KeyCode.Escape))
-        {
-            TerminarInspeccion();
             RecogerItem();
-        }
-    }
-
-    private void ComenzarInspeccion()
-    {
-        estaInspeccionando = true;
-        canvasPanel.SetActive(true);
-
-        // Activa el modelo del ítem y coloca en el punto de inspección
-        itemModel.SetActive(true);
-        itemModel.transform.position = inspeccionPunto.position;
-        itemModel.transform.rotation = Quaternion.identity;
-
-        // Activar la cámara de inspección
-        Camera inspectionCamera = GameObject.Find("InspeccionCamara")?.GetComponent<Camera>();
-        if (inspectionCamera != null)
-        {
-            inspectionCamera.enabled = true;
-        }
-    }
-
-    private void TerminarInspeccion()
-    {
-        estaInspeccionando = false;
-        canvasPanel.SetActive(false);
-
-        // Desactivar la cámara de inspección
-        Camera inspectionCamera = GameObject.Find("InspeccionCamara")?.GetComponent<Camera>();
-        if (inspectionCamera != null)
-        {
-            inspectionCamera.enabled = false;
         }
     }
 
     private void RecogerItem()
     {
-        // Acceder al script Player para añadir el ítem al inventario
+        // Buscar el script del jugador
         Player player = FindObjectOfType<Player>();
         if (player != null)
         {
+            // Añadir el ítem al inventario
             player.AñadirItemAlInventario(itemIndex, gameObject);
             Debug.Log($"Ítem {itemName} (Index: {itemIndex}) recogido y añadido al inventario.");
-        }
 
-        // Destruir el objeto tras recogerlo
-        Destroy(gameObject);
+            // Desactivar o destruir el objeto después de recogerlo
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.LogError("No se encontró el script Player en la escena.");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -85,6 +50,7 @@ public class Items : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             estaEnRango = true;
+            Debug.Log("El jugador está en rango para recoger el objeto.");
         }
     }
 
@@ -93,6 +59,7 @@ public class Items : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             estaEnRango = false;
+            Debug.Log("El jugador salió del rango del objeto.");
         }
     }
 }

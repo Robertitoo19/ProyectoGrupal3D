@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     {
         OnOffFlashLight();
         CaidaPlayer();
+        CambiarArma();
     }
     private void CaidaPlayer()
     {
@@ -62,16 +63,20 @@ public class Player : MonoBehaviour
     {
         if (index >= 0 && index < items.Length)
         {
-            // Activar el flag de inventario
+            // Marcar el ítem como obtenido
             tieneItem[index] = true;
-            Debug.Log($"Ítem {index} añadido al inventario.");
 
-            // Destruir el objeto de la escena si corresponde
-            Destroy(objeto);
+            // Asegurarse de que el ítem en el array corresponde al GunManager
+            if (items[index] == null)
+            {
+                items[index] = objeto; // Asignar el ítem al array
+            }
+
+            Debug.Log($"Ítem {index} añadido al inventario.");
         }
         else
         {
-            Debug.LogWarning("Índice fuera de rango. No se puede añadir al inventario.");
+            Debug.LogWarning($"Índice fuera de rango: {index}. No se puede añadir al inventario.");
         }
     }
     bool estaCayendo()
@@ -101,13 +106,9 @@ public class Player : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha4)) nuevoItemNº = 3;
         else if (Input.GetKeyDown(KeyCode.Alpha5)) nuevoItemNº = 4;
 
-        // Validar el índice y si el ítem está desbloqueado
-        if (nuevoItemNº >= 0 && nuevoItemNº < items.Length && tieneItem[nuevoItemNº])
+        // Validar si el índice es válido y el jugador tiene ese ítem
+        if (nuevoItemNº >= 0 && nuevoItemNº < Items.Length && TieneItem[nuevoItemNº])
         {
-            // Si ya está equipado, no hacer nada
-            if (equiparItem == items[nuevoItemNº])
-                return;
-
             // Desactivar el ítem actualmente equipado (si existe)
             if (equiparItem != null)
             {
@@ -115,8 +116,21 @@ public class Player : MonoBehaviour
             }
 
             // Activar el nuevo ítem y asignarlo como el actual
-            equiparItem = items[nuevoItemNº];
+            equiparItem = Items[nuevoItemNº];
             equiparItem.SetActive(true);
+
+            // Actualizar el estado de los objetos en el GunManager
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if (i == nuevoItemNº)
+                {
+                    Items[i].SetActive(true); // Activar el ítem seleccionado
+                }
+                else
+                {
+                    Items[i].SetActive(false); // Desactivar los demás ítems
+                }
+            }
 
             // Opcional: Lanzar animación de cambio de arma
             anim.SetTrigger("swap");
@@ -125,6 +139,7 @@ public class Player : MonoBehaviour
             // Temporizador para finalizar el cambio de arma
             Invoke("TerminarCambiarArma", 0.4f);
         }
+        Debug.Log("CambiarArma llamado");
     }
     private void TerminarCambiarArma()
     {

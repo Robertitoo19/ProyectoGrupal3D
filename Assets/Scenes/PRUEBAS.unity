@@ -5898,6 +5898,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4c0e19649da9c44aa8d4fdda281cde6, type: 3}
+--- !u!1 &909893562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5995334780005642766, guid: bb06c3206430bdf47bb9d2b81d74952f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3076505300722911627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &970925154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,6 +6077,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1047068352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3466913727809865708, guid: 8cb3f784abeab0e49ba0dd26bd28da84,
+    type: 3}
+  m_PrefabInstance: {fileID: 7357492629449079532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1110403082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9040953033919288063, guid: 76eeedd75ae685242b2d517f7a698de3,
@@ -11577,6 +11589,12 @@ MonoBehaviour:
   shakeDuration: 0.07
   shakeMagnitude: 0.05
   shakeSpeed: 0.2
+--- !u!1 &1756817579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2450750919784348363, guid: dd018c28cc6d54e46abb6efc1ba88a57,
+    type: 3}
+  m_PrefabInstance: {fileID: 927678347195040414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1816020473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3267178463638152513, guid: 299a233c03211204bac8ded80ba25d20,
@@ -11695,6 +11713,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2043523474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5526380268049936010, guid: da7f0c5ecb6e61144be39927bc87c12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5980324546644652208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2064161388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8846326073472269369, guid: 5022d999c52d01341ba6e705526b7236,
@@ -12322,6 +12346,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.971985
       objectReference: {fileID: 0}
+    - target: {fileID: 7598483495931532771, guid: dd018c28cc6d54e46abb6efc1ba88a57,
+        type: 3}
+      propertyPath: itemModel
+      value: 
+      objectReference: {fileID: 1756817579}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14182,6 +14211,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.971985
       objectReference: {fileID: 0}
+    - target: {fileID: 4489863509283523293, guid: bb06c3206430bdf47bb9d2b81d74952f,
+        type: 3}
+      propertyPath: itemModel
+      value: 
+      objectReference: {fileID: 909893562}
     - target: {fileID: 5995334780005642766, guid: bb06c3206430bdf47bb9d2b81d74952f,
         type: 3}
       propertyPath: m_Name
@@ -16576,6 +16610,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2550690459588007423, guid: da7f0c5ecb6e61144be39927bc87c12e,
+        type: 3}
+      propertyPath: itemModel
+      value: 
+      objectReference: {fileID: 2043523474}
     - target: {fileID: 4867351219617513172, guid: da7f0c5ecb6e61144be39927bc87c12e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22669,6 +22708,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objeto 4_Collider
       objectReference: {fileID: 0}
+    - target: {fileID: 5138532570272436280, guid: 8cb3f784abeab0e49ba0dd26bd28da84,
+        type: 3}
+      propertyPath: itemModel
+      value: 
+      objectReference: {fileID: 1047068352}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23713,7 +23757,7 @@ MonoBehaviour:
   - {fileID: 2064161388}
   - {fileID: 1110403082}
   - {fileID: 1816020473}
-  tieneItem: 010000000000
+  tieneItem: 0100000000
   vidaPlayer: 100
   linterna: {fileID: 0}
   alturaMinimaCaida: 2
