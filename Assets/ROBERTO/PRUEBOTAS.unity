@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 8702534868499336141, guid: 4d73d8dadf1edee4ca8d4868ec54d345,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -985,7 +985,7 @@ PrefabInstance:
     - target: {fileID: 8702534868499336141, guid: 2459a6af98a1eae4ebc79b1ffd638762,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1840,7 +1840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1703203073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,6 +2891,7 @@ GameObject:
   - component: {fileID: 543450651644650678}
   - component: {fileID: 919132147989331470}
   - component: {fileID: 919132147989331469}
+  - component: {fileID: 919132147989331471}
   m_Layer: 0
   m_Name: Toy Chest
   m_TagString: Untagged
@@ -2931,6 +2932,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d29cf09ecb396041997df7885e22637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventManager: {fileID: 11400000, guid: 42fc8fe02ff98fc4aba3ab6900555bd7, type: 2}
+  passwordPanel: {fileID: 976946238}
+--- !u!65 &919132147989331471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147989331468}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45706958, y: 0.22546032, z: 0.20882379}
+  m_Center: {x: 0.0015785863, y: 0.1099885, z: -0.0036974663}
 --- !u!33 &1018906835334407970
 MeshFilter:
   m_ObjectHideFlags: 0

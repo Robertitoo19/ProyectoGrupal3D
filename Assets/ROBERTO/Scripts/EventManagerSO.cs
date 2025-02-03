@@ -8,6 +8,7 @@ public class EventManagerSO : ScriptableObject
 {
     public event Action OnNewInteractuable;
     public event Action OnNoInteractuable;
+    public event Action OnInteractChest;
     public void NewInteractuable()
     {
         OnNewInteractuable?.Invoke();
@@ -19,6 +20,6 @@ public class EventManagerSO : ScriptableObject
 
     public void ChestInteracted()
     {
-        throw new NotImplementedException();
+        OnInteractChest?.Invoke();
     }
 }
