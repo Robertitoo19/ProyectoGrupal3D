@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         alturaMaximaCaida = transform.position.y;

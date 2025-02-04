@@ -13,6 +13,11 @@ public class EjemploCanvas : MonoBehaviour
         eventManager.OnNewInteractuable += EncenderLetraE;
         eventManager.OnNoInteractuable += ApagarLetraE;
     }
+    private void OnDisable()
+    {
+        eventManager.OnNewInteractuable -= EncenderLetraE;
+        eventManager.OnNoInteractuable -= ApagarLetraE;
+    }
     //modelo-vista-controlador. (MVC)
     private void ApagarLetraE()
     {
@@ -22,13 +27,5 @@ public class EjemploCanvas : MonoBehaviour
     private void EncenderLetraE()
     {
         textoInteraccion.SetActive(true);
-    }
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
     }
 }

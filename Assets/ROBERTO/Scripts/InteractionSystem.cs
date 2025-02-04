@@ -5,11 +5,9 @@ using UnityEngine;
 public class InteractionSystem : MonoBehaviour
 {
     [SerializeField] private EventManagerSO eventManager;
-
     [SerializeField] private float interactionDistance;
 
     private Camera cam;
-
     private IInteractable currentInteractuable;
 
     private void Awake()

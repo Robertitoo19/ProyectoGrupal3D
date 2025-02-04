@@ -24,7 +24,6 @@ public class PuzzleManager : MonoBehaviour
         // Verificar que la longitud del input sea correcta
         if (inputPassword.Length != correctPassword.Length)
         {
-            Debug.Log("La contraseña no tiene esa longuitud");
             return false;
         }
 
@@ -33,12 +32,9 @@ public class PuzzleManager : MonoBehaviour
         {
             if (inputPassword[i] - '0' != correctPassword[i]) // Convertir carácter a número
             {
-                Debug.Log("Contraseña incorrecta");
                 return false;
             }
         }
-
-        Debug.Log("Contraseña correcta");
         return true;
     }
 }

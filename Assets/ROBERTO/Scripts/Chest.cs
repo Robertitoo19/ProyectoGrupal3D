@@ -6,8 +6,8 @@ using UnityEngine;
 public class Chest : MonoBehaviour, IInteractable
 {
     [SerializeField] private EventManagerSO eventManager;
-
     [SerializeField] private GameObject passwordPanel;
+
     private Animator anim;
     private bool isOpen = false;
     void Start()
@@ -16,12 +16,15 @@ public class Chest : MonoBehaviour, IInteractable
     }
     private void OnEnable()
     {
-
+        eventManager.OnInteractChest += OpenPanel;
+    }
+    private void OnDisable()
+    {
+        eventManager.OnInteractChest -= OpenPanel;
     }
     public void Interact()
     {
-        passwordPanel.SetActive(true);
-        eventManager.ChestInteracted();
+        eventManager.InteractChest();
     }
     public void Open()
     {
@@ -29,6 +32,18 @@ public class Chest : MonoBehaviour, IInteractable
         {
             isOpen = true;
             anim.SetTrigger("Abrir");
+            passwordPanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1f;
+        }
+    }
+    private void OpenPanel()
+    {
+        if (!isOpen)
+        {
+            passwordPanel.SetActive(true);
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

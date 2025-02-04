@@ -17,8 +17,7 @@ public class EventManagerSO : ScriptableObject
     {
         OnNoInteractuable?.Invoke();
     }
-
-    public void ChestInteracted()
+    public void InteractChest()
     {
         OnInteractChest?.Invoke();
     }

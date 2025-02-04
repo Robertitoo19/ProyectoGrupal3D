@@ -8,10 +8,11 @@ using UnityEngine.Rendering.VirtualTexturing;
 public class ManualGun : MonoBehaviour
 {
     [SerializeField] private ArmaSO myData;
+    [SerializeField] ParticleSystem particles;
+    [SerializeField] private Animator anim;
 
     private Camera cam;
 
-    [SerializeField] ParticleSystem particles;
 
     [Header("-----Sistema Recarga-----")]
 
@@ -23,12 +24,10 @@ public class ManualGun : MonoBehaviour
 
     private float reloadTime = 1.5f;
     private bool isReloading = false;
-    private Animator anim;
 
     void Start()
     {
         cam = Camera.main;
-        anim = GetComponent<Animator>();
 
         currentAmmo = myData.bullets;
         currentChamber = myData.chamberBullets;
@@ -59,6 +58,7 @@ public class ManualGun : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && currentAmmo >0)
         {
             particles.Play();
+            anim.SetTrigger("Shoot");
             currentAmmo--;
             txtCurrentAmmo.text = currentAmmo.ToString();
 
@@ -78,6 +78,8 @@ public class ManualGun : MonoBehaviour
         if (currentChamber >= emptys) 
         {
             isReloading = true;
+
+            anim.SetTrigger("Reload");
 
             yield return new WaitForSeconds(reloadTime);
 
