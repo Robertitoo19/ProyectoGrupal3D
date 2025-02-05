@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
 
-public class Items : MonoBehaviour
+public class Items : MonoBehaviour, IInteractable
 {
     [SerializeField] private int itemIndex; // Índice del objeto en el inventario
     [SerializeField] private string itemName; // Nombre para identificar el objeto
@@ -28,21 +28,7 @@ public class Items : MonoBehaviour
 
     private void RecogerItem()
     {
-        // Buscar el script del jugador
-        Player player = FindObjectOfType<Player>();
-        if (player != null)
-        {
-            // Añadir el ítem al inventario
-            player.AñadirItemAlInventario(itemIndex, gameObject);
-            Debug.Log($"Ítem {itemName} (Index: {itemIndex}) recogido y añadido al inventario.");
-
-            // Desactivar o destruir el objeto después de recogerlo
-            Destroy(gameObject);
-        }
-        else
-        {
-            Debug.LogError("No se encontró el script Player en la escena.");
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -60,6 +46,25 @@ public class Items : MonoBehaviour
         {
             estaEnRango = false;
             Debug.Log("El jugador salió del rango del objeto.");
+        }
+    }
+
+    public void Interact()
+    {
+        // Buscar el script del jugador
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
+        {
+            // Añadir el ítem al inventario
+            player.AñadirItemAlInventario(itemIndex, gameObject);
+            Debug.Log($"Ítem {itemName} (Index: {itemIndex}) recogido y añadido al inventario.");
+
+            // Desactivar o destruir el objeto después de recogerlo
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.LogError("No se encontró el script Player en la escena.");
         }
     }
 }
