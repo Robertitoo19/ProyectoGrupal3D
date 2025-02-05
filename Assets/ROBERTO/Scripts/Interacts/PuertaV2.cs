@@ -7,7 +7,6 @@ public class PuertaV2 : MonoBehaviour,IInteractable
     private Animator anim;
 
     [Header("-----Audio-----")]
-    [SerializeField] AudioManager audioManager;
     public AudioClip[] sonidos;
     private void Start()
     {
@@ -15,7 +14,7 @@ public class PuertaV2 : MonoBehaviour,IInteractable
     }
     public void Interact()
     {
-        audioManager.ReproduceSFX(sonidos[0]);
+        AudioManager.instance.ReproduceSFX(sonidos[0]);
         anim.SetTrigger("Abrir");
     }
 }
