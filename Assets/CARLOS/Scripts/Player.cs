@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
     private Inventario inv;
 
     [Header("-----Audio-----")]
-    [SerializeField] AudioManager audioManager;
     public AudioClip[] sonidos;
 
 
@@ -36,7 +35,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         alturaMaximaCaida = transform.position.y;
     }
@@ -95,7 +94,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            audioManager.ReproduceSFX(sonidos[0]);
+            AudioManager.instance.ReproduceSFX(sonidos[0]);
             linterna.enabled = !linterna.enabled;
         }
     }

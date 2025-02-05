@@ -3,7 +3,12 @@ guid: f5df78820dcbda04ca49d537cb7ef40e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Telefono
+    second: {fileID: 2100000, guid: 363d358689f4c2f45b50a00f393e0099, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

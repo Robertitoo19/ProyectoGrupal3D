@@ -38,6 +38,6 @@ public class PasswordPanel : MonoBehaviour
     {
         gameObject.SetActive(false);
         Time.timeScale = 1f;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
