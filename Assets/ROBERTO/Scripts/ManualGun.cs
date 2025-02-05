@@ -25,6 +25,10 @@ public class ManualGun : MonoBehaviour
     private float reloadTime = 1.5f;
     private bool isReloading = false;
 
+    [Header("-----Audio-----")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] private AudioClip[] sonidos;
+
     void Start()
     {
         cam = Camera.main;
@@ -58,6 +62,7 @@ public class ManualGun : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && currentAmmo >0)
         {
             particles.Play();
+            audioManager.ReproduceSFX(sonidos[0]);
             anim.SetTrigger("Shoot");
             currentAmmo--;
             txtCurrentAmmo.text = currentAmmo.ToString();
@@ -78,7 +83,7 @@ public class ManualGun : MonoBehaviour
         if (currentChamber >= emptys) 
         {
             isReloading = true;
-
+            audioManager.ReproduceSFX(sonidos[1]);
             anim.SetTrigger("Reload");
 
             yield return new WaitForSeconds(reloadTime);

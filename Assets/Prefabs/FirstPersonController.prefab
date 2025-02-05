@@ -5194,7 +5194,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -5251,10 +5251,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f72bd7c20430d49a4f4709671bc783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  tieneItem: 
   vidaPlayer: 100
   linterna: {fileID: 1574194240340310214}
   alturaMinimaCaida: 0
   alturaMaximaCaida: 0
+  audioManager: {fileID: 0}
+  sonidos:
+  - {fileID: 8300000, guid: c95310f26b850c5418f2b763d0099de6, type: 3}
 --- !u!114 &6971310337762871894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5296,7 +5301,7 @@ MonoBehaviour:
   sprintCooldown: 1.5
   sprintFOV: 80
   sprintFOVStepTime: 8
-  useSprintBar: 1
+  useSprintBar: 0
   hideBarWhenFull: 1
   sprintBarBG: {fileID: 5081752254579473552}
   sprintBar: {fileID: 435377684663363385}
@@ -5430,10 +5435,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.8640272, b: 0.6650944, a: 1}
-  m_Intensity: 10
-  m_Range: 18.5
-  m_SpotAngle: 46.230988
-  m_InnerSpotAngle: 30.871979
+  m_Intensity: 20
+  m_Range: 18
+  m_SpotAngle: 55
+  m_InnerSpotAngle: 40
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -6982,8 +6987,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myData: {fileID: 11400000, guid: b7199cae4c37d2845974aacb59945f28, type: 2}
   particles: {fileID: 6619034762841572468}
+  anim: {fileID: 0}
   txtCurrentAmmo: {fileID: 4831524663745619619}
   txtCurrentChamber: {fileID: 271975584420303144}
+  audioManager: {fileID: 0}
+  sonidos: []
 --- !u!4 &2892962602165401083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e7b80c2d20e66c4fade2ccee8ab5df1,

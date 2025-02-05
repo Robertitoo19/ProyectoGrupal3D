@@ -48,6 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da658e8e82f25e24386758034b6c9774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sonidos:
+  - {fileID: 8300000, guid: b6e91ddfc3e53c047bc3daff2f280d7b, type: 3}
 --- !u!33 &8333870822324101548
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -188,6 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da658e8e82f25e24386758034b6c9774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sonidos:
+  - {fileID: 8300000, guid: b6e91ddfc3e53c047bc3daff2f280d7b, type: 3}
 --- !u!33 &4412490349496593680
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -328,6 +334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da658e8e82f25e24386758034b6c9774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sonidos:
+  - {fileID: 8300000, guid: b6e91ddfc3e53c047bc3daff2f280d7b, type: 3}
 --- !u!33 &3048751762518701095
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -468,6 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da658e8e82f25e24386758034b6c9774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sonidos:
+  - {fileID: 8300000, guid: b6e91ddfc3e53c047bc3daff2f280d7b, type: 3}
 --- !u!33 &4981895426356050892
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -689,9 +701,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8638411006876756710}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000047069793, y: 0.816161, z: 0.00000006648474, w: 0.5778246}
+  m_LocalRotation: {x: 0, y: 0.8161628, z: 0, w: 0.57782197}
   m_LocalPosition: {x: 480.65, y: 27.774, z: 524.01}
-  m_LocalScale: {x: 1.942318, y: 1.9423177, z: 1.942318}
+  m_LocalScale: {x: 1.9423182, y: 1.9423177, z: 1.9423182}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3939575470960835291}

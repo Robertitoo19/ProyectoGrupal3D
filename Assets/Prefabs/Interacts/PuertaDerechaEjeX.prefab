@@ -48,6 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af044e31060e92e40ab98d21c08f53aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sonidos:
+  - {fileID: 8300000, guid: f7807f91224ae744e8480f964cef52e1, type: 3}
 --- !u!33 &8610390962929669971
 MeshFilter:
   m_ObjectHideFlags: 0

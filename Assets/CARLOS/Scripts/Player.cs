@@ -25,9 +25,11 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     private Inventario inv;
 
+    [Header("-----Audio-----")]
+    [SerializeField] AudioManager audioManager;
+    public AudioClip[] sonidos;
 
 
-    
     public int VidaPlayer { get => vidaPlayer; set => vidaPlayer = value; }
     public bool[] TieneItem { get => tieneItem; set => tieneItem = value; }
 
@@ -93,6 +95,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            audioManager.ReproduceSFX(sonidos[0]);
             linterna.enabled = !linterna.enabled;
         }
     }
