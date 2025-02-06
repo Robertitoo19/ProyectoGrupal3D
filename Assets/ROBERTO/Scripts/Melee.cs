@@ -9,9 +9,15 @@ public class Melee : MonoBehaviour
     [SerializeField] private Animator anim;
     private Camera cam;
 
+
+
     private void Awake()
     {
         cam = Camera.main;
+    }
+    private void Start()
+    {
+        //anim = GetComponentInParent<Animator>();
     }
     void Update()
     {
@@ -22,7 +28,7 @@ public class Melee : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            anim.SetTrigger("Attack");
+            anim.SetTrigger("MeleeAttack");
 
             if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, myData.attackDistance))
             {

@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            AudioManager.instance.ReproduceSFX(sonidos[0]);
+            //AudioManager.instance.ReproduceSFX(sonidos[0]);
             linterna.enabled = !linterna.enabled;
         }
     }
