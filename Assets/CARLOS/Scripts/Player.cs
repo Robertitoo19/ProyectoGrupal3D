@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public GameObject[] Items { get => items; set => items = value; }
 
     [SerializeField] int vidaPlayer;
+
     [SerializeField] int CurasPlayer;
 
     [SerializeField] Light linterna;
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
 
     public int VidaPlayer { get => vidaPlayer; set => vidaPlayer = value; }
     public bool[] TieneItem { get => tieneItem; set => tieneItem = value; }
+    public int CurasPlayer1 { get => CurasPlayer; set => CurasPlayer = value; }
 
     void Start()
     {
