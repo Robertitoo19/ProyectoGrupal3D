@@ -62,7 +62,7 @@ public class ManualGun : MonoBehaviour
         {
             Debug.Log("Disparo activado");
             particles.Play();
-            //AudioManager.instance.ReproduceSFX(sonidos[0]);
+            AudioManager.instance.ReproduceSFX(sonidos[0]);
             anim.SetTrigger("shoot");
             currentAmmo--;
             txtCurrentAmmo.text = currentAmmo.ToString();
@@ -83,7 +83,7 @@ public class ManualGun : MonoBehaviour
         if (currentChamber >= emptys) 
         {
             isReloading = true;
-            //AudioManager.instance.ReproduceSFX(sonidos[1]);
+            AudioManager.instance.ReproduceSFX(sonidos[1]);
             anim.SetTrigger("reload");
 
             yield return new WaitForSeconds(reloadTime);

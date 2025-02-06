@@ -9,7 +9,8 @@ public class Melee : MonoBehaviour
     [SerializeField] private Animator anim;
     private Camera cam;
 
-
+    [Header("-----Audio-----")]
+    [SerializeField] private AudioClip[] sonidos;
 
     private void Awake()
     {
@@ -29,8 +30,9 @@ public class Melee : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetTrigger("MeleeAttack");
+            AudioManager.instance.ReproduceSFX(sonidos[0]);
 
-            if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, myData.attackDistance))
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, myData.attackDistance))
             {
                 if(hitInfo.transform.TryGetComponent(out EnemyPart enemyPartScript))
                 {
