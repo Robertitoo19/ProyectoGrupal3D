@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class AnimacionCardiograma : MonoBehaviour
 {
-    public Animator cardiogramaAnimator;
+    [SerializeField]public Animator cardiogramaAnimator;
 
-
-    
-
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Q))
+        animacionCardiograma();
+    }
+
+    private void animacionCardiograma()
+    {
+        if (Input.GetKey(KeyCode.Q))
         {
             cardiogramaAnimator.SetBool("BrazoToPlayer", true);
-            cardiogramaAnimator.SetBool("BrazoToSide",false);
+            cardiogramaAnimator.SetBool("BrazoToSide", false);
 
         }
-        else 
+        else
         {
             cardiogramaAnimator.SetBool("BrazoToPlayer", false);
             cardiogramaAnimator.SetBool("BrazoToSide", true);
         }
-        if(!Input.GetKey(KeyCode.Q) && cardiogramaAnimator.GetBool("BrazoToSide") == false)
+        if (!Input.GetKey(KeyCode.Q) && cardiogramaAnimator.GetBool("BrazoToSide") == false)
         {
             cardiogramaAnimator.SetBool("BrazoToPlayer", false);
             cardiogramaAnimator.SetBool("BrazoToSide", false);
@@ -36,5 +34,4 @@ public class AnimacionCardiograma : MonoBehaviour
         //toca revisar el error de sistema cardioframa no tiene funcionm especifica
     }
 
-    
 }

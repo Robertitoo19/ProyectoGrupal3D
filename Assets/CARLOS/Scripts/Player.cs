@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public GameObject[] Items { get => items; set => items = value; }
 
     [SerializeField] int vidaPlayer;
+    [SerializeField] int CurasPlayer;
 
     [SerializeField] Light linterna;
 
