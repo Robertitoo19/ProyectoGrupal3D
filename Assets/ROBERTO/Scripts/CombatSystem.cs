@@ -10,6 +10,7 @@ public class CombatSystem : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float combatVelocity;
     [SerializeField] private float attackDistance;
+    [SerializeField] private float attackDamage;
     [SerializeField] private float detectionRadius;
     [SerializeField] private Animator anim;
 
@@ -65,7 +66,6 @@ public class CombatSystem : MonoBehaviour
         }
     }
 
-
     private void AimObjetive()
     {
         Vector3 targetDirection = (mainScript.Target.position - transform.position).normalized;
@@ -80,8 +80,12 @@ public class CombatSystem : MonoBehaviour
         mainScript.Target = null; // El objetivo deja de ser válido
         mainScript.ActivePatroll();
     }
+    public void Attack()
+    {
+        mainScript.Target.GetComponent<IDamagable>().ReceiveDamage(attackDamage);
+    }
     #region Eventos Animacion
-    private void Attack()
+    private void StartAttack()
     {
         if (mainScript.Target != null)
         {
