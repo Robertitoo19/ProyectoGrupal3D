@@ -8,7 +8,6 @@ public class Puerta1 : MonoBehaviour, IInteractable
     private static bool hasKey = false;
     private bool bloqued = false;
 
-
     [Header("-----Audio-----")]
     public AudioClip[] sonidos;
     private void Start()
@@ -19,6 +18,7 @@ public class Puerta1 : MonoBehaviour, IInteractable
     {
         if (bloqued)
         {
+
             Debug.Log("bloqueada, necesitas palanca");
             return;
         }
