@@ -9,10 +9,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int rounds;
     [SerializeField] private int spawnsPerRound;
     [SerializeField] private float waitPerSpawns;
-    void Start()
-    {
-        StartCoroutine(SpawnSystem());
-    }
+
+    private bool isActive = false;
     private IEnumerator SpawnSystem()
     {
         for (int i = 0; i < rounds; i++)
@@ -22,6 +20,15 @@ public class Spawner : MonoBehaviour
                 Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
                 yield return new WaitForSeconds(waitPerSpawns);
             }
+        }
+    }
+    public void ActivateSpawner()
+    {
+        if (!isActive)
+        {
+            gameObject.SetActive(true);
+            isActive = true;
+            StartCoroutine(SpawnSystem());
         }
     }
 }

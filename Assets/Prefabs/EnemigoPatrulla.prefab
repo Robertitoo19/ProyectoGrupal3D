@@ -231,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 255871531076152529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.6, y: 0, z: 6.97}
+  m_LocalPosition: {x: -18.521, y: 0.155, z: -8.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1138,7 +1138,7 @@ MonoBehaviour:
     m_Bits: 64
   whatIsObstacle:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   patrollVelocity: 3
   agent: {fileID: 3831314358217703713}
   route: {fileID: 3578562379090841131}
@@ -1856,7 +1856,7 @@ Transform:
   m_GameObject: {fileID: 4754529079793454219}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.92, y: 0, z: -2.6}
+  m_LocalPosition: {x: 2.758, y: 0.039, z: -6.719}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2559,7 +2559,7 @@ Transform:
   m_GameObject: {fileID: 6127668226328339262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: 0, z: 6.97}
+  m_LocalPosition: {x: -15.948, y: 0, z: 1.395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3080,7 +3080,7 @@ Transform:
   m_GameObject: {fileID: 6582973518170458813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.21, y: 0, z: 14.25}
+  m_LocalPosition: {x: 2.63, y: 0.05, z: 0.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4549,6 +4549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4cbc1b7a04b4245aff13579660bf88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifes: 100
 --- !u!114 &4923660204479584394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4563,8 +4564,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainScript: {fileID: 2601318245699508073}
   agent: {fileID: 3831314358217703713}
-  combatVelocity: 4
+  combatVelocity: 3.5
   attackDistance: 2
+  attackDamage: 20
   detectionRadius: 8
   anim: {fileID: 751543578250326753}
 --- !u!195 &3831314358217703713
