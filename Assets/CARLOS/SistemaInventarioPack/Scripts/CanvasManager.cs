@@ -19,7 +19,7 @@ public class CanvasManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gM = gameObject.GetComponent<GameManagerSO>();
+        
     }
 
     // Update is called once per frame
