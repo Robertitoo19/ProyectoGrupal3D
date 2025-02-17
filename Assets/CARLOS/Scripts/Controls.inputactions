@@ -1,0 +1,82 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "9d8a81b0-548e-442e-a56f-4561737521a3",
+            "actions": [
+                {
+                    "name": "StartInspection",
+                    "type": "Button",
+                    "id": "6dc20cbf-0d6b-4c78-b326-22b4591b7c49",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "559211b8-d30c-4dc2-b03b-8f6824edc43c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartInspection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Looking",
+            "id": "64e116d6-b355-4cd4-bb4b-6139ea859c73",
+            "actions": [
+                {
+                    "name": "InspectAround",
+                    "type": "Value",
+                    "id": "81d60949-3744-41b7-a12c-a22deb8a8407",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "QuitInspection",
+                    "type": "Button",
+                    "id": "ca3dd34d-a575-4b10-8f11-14c9a1843c81",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "496cd27e-9759-4952-83bb-2d29117b8bff",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InspectAround",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7aaf512b-a350-45eb-b9af-8f359d2e7db9",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuitInspection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

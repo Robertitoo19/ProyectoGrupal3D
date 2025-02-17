@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
 
-public class Items : MonoBehaviour, IInteractable
+public class Items : LookableItem, IInteractable
 {
     [SerializeField] private int itemIndex; // Índice del objeto en el inventario
     [SerializeField] private string itemName; // Nombre para identificar el objeto
-    [SerializeField] private GameObject canvasPanel;
-    [SerializeField] private GameObject itemModel;
-    [SerializeField] private Transform inspeccionPunto;
+    
     [SerializeField] private float rangoItem = 2f;
 
     private bool estaEnRango = false;

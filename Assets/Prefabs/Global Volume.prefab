@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5181839625307241385}
+  - component: {fileID: 1308028204428744825}
   - component: {fileID: 9118442149635355935}
   m_Layer: 0
   m_Name: Global Volume
@@ -16,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5181839625307241385
 Transform:
   m_ObjectHideFlags: 0
@@ -32,6 +33,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1308028204428744825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150341933613846018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79a4065864eeb343856b502f8944f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventManager: {fileID: 11400000, guid: 42fc8fe02ff98fc4aba3ab6900555bd7, type: 2}
 --- !u!114 &9118442149635355935
 MonoBehaviour:
   m_ObjectHideFlags: 0
