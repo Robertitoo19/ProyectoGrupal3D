@@ -6,6 +6,7 @@ public class InteractionSystem : MonoBehaviour
 {
     [SerializeField] private EventManagerSO eventManager;
     [SerializeField] private float interactionDistance;
+    [SerializeField] private LayerMask filter;
 
     private Camera cam;
     private IInteractable currentInteractuable;
@@ -32,7 +33,7 @@ public class InteractionSystem : MonoBehaviour
 
     private void DetectInteractuable()
     {
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, interactionDistance))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, interactionDistance, filter))
         {
             if (hit.transform.TryGetComponent(out IInteractable interactable))
             {

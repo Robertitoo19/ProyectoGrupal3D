@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Manual
   m_EditorClassIdentifier: 
   bullets: 7
-  chamberBullets: 42
+  chamberBullets: 30
   cadence: 2
   attackDistance: 200
   attackDamage: 25
