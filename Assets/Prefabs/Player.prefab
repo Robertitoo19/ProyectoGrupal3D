@@ -17976,7 +17976,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -27823,6 +27823,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 9.066
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 85609114bd9ea95479a13128df3460f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f763b20102ec9d040b6440fd2da5136d, type: 2}
     - target: {fileID: 919132149155446097, guid: 85609114bd9ea95479a13128df3460f1,
         type: 3}
       propertyPath: m_Name
