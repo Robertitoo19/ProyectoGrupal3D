@@ -17,6 +17,9 @@ public class GlobalVolume : MonoBehaviour
     private void Awake()
     {
         volume = GetComponent<Volume>();
+        volume.enabled = false;
+
+
         if(volume.profile.TryGet(out DepthOfField dOf))
         {
             dof = dOf;
@@ -34,6 +37,7 @@ public class GlobalVolume : MonoBehaviour
 
     private void EnableDOF(float duration, float distance)
     {
+        volume.enabled = true;
         DOTween.To(() => dofCurrentValue, x => dofCurrentValue = x, distance, duration).
             OnUpdate(() => dof.focusDistance.value = dofCurrentValue);
     }
@@ -41,6 +45,7 @@ public class GlobalVolume : MonoBehaviour
     {
         DOTween.To(() => dofCurrentValue, x => dofCurrentValue = x, dofInitialValue, duration).
             OnUpdate(() => dof.focusDistance.value = dofCurrentValue);
+        volume.enabled = false;   
     }
 
 }

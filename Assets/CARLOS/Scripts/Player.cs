@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using static Cinemachine.DocumentationSortingAttribute;
 
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     private GameObject equiparItem;
     bool estaCambiandoItem = false;
     int itemNº = -1;
+    
 
     private Animator anim;
 
@@ -26,6 +28,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float alturaMaximaCaida;
     private Rigidbody rb;
     private Inventario inv;
+
+
+    [SerializeField] private CambiarColor cambiarColor;
 
     [Header("-----Audio-----")]
     public AudioClip[] sonidos;
@@ -47,6 +52,18 @@ public class Player : MonoBehaviour
         OnOffFlashLight();
         CaidaPlayer();
         CambiarArma();
+        UsarCuras();
+    }
+    private void UsarCuras()
+    {
+        if (cambiarColor.CardiogramaActivo() && Input.GetKeyDown(KeyCode.E) && CurasPlayer > 0 && VidaPlayer < 100)
+        {
+            CurasPlayer--;
+            VidaPlayer += 20; // Ajusta la cantidad de curación
+            if (VidaPlayer > 100) VidaPlayer = 100; // No exceder el límite
+
+            Debug.Log("Cura usada. Curas restantes: " + CurasPlayer);
+        }
     }
     private void CaidaPlayer()
     {
@@ -92,6 +109,7 @@ public class Player : MonoBehaviour
     public void ReceiveDamage(int enemyDamage)
     {
         vidaPlayer -= enemyDamage;
+        anim.SetTrigger("die");
     }
     private void OnOffFlashLight()
     {

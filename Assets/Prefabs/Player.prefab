@@ -17586,6 +17586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventManager: {fileID: 11400000, guid: 42fc8fe02ff98fc4aba3ab6900555bd7, type: 2}
   interactionDistance: 2
+  filter:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2007223809756985932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17627,10 +17630,11 @@ MonoBehaviour:
   - {fileID: 8032160358454168403}
   tieneItem: 0100000000
   vidaPlayer: 100
-  CurasPlayer: 0
+  CurasPlayer: 3
   linterna: {fileID: 2812310524422729588}
   alturaMinimaCaida: 2
   alturaMaximaCaida: 4
+  cambiarColor: {fileID: 7265695508810414491}
   sonidos: []
 --- !u!82 &5907404926729139569
 AudioSource:
@@ -19086,7 +19090,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5238046599366084652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b250eedd7ca16d94385fe461482f9d3e, type: 3}
   m_Name: 

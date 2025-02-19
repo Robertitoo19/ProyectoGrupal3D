@@ -52,4 +52,8 @@ public class CambiarColor : MonoBehaviour
             cardiogramaRojo.SetActive(true);
         }
     }
+    public bool CardiogramaActivo()
+    {
+        return cardiogramaVerde.activeSelf || cardiogramaNaranja.activeSelf || cardiogramaRojo.activeSelf;
+    }
 }
